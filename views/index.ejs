@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= message[0].text %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% for( let i = 0; i < message.length; i++ ) { %>
+      <p><%= message[i].text %></p>
+      <p>User: <%= message[i].user %></p>
+      <p>Date: <%= message[i].added %></p>
+    <% } %>
+
+  </body>
+</html>
