@@ -4,12 +4,20 @@
     <title><%= message[0].text %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
-    <% for( let i = 0; i < message.length; i++ ) { %>
-      <p><%= message[i].text %></p>
-      <p>User: <%= message[i].user %></p>
-      <p>Date: <%= message[i].added %></p>
-    <% } %>
 
+  <body>
+    <header>
+      <a class="title" href="/">Mini Message Board</a>
+      <a href="/new">Add New Message</a>
+    </header>
+    <section class="message-container">
+      <% for( let i = 0; i < message.length; i++ ) { %>
+        <div class="message">
+          <p><%= message[i].text %></p>
+          <p>- <%= message[i].user %></p>
+          <p> <%= message[i].added %></p>
+        </div>
+      <% } %>
+    </section>
   </body>
 </html>

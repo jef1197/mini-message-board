@@ -1,6 +1,24 @@
-<form method="POST" action="/new">
-    <h1>Form</h1>
-    <input type="text" name="nameText" placeholder="name">
-    <input type="text" name="messageText" placeholder="message">
-    <input type="submit"/>
-</form>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+    <header>
+      <a class="title" href="/">Mini Message Board</a>
+      <a href="/new">Add New Message</a>
+    </header>
+    <section class="form-container">
+        <h1>Add Message</h1>
+        <form method="POST" action="/new">
+            <input type="text" name="nameText" placeholder="name">
+            <textarea cols="50" rows="4" name="messageText" ></textarea>
+            <input type="submit"/>
+        </form>
+    </section>
+
+  </body>
+</html>
+
